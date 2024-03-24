@@ -26,3 +26,4 @@ require("lazy").setup("plugins")
 
 -- File explorer shortcut
 vim.keymap.set('n', '<leader>e', vim.cmd.Ex, {})
+vim.cmd(':Neotree filesystem reveal left')
