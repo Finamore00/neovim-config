@@ -24,21 +24,15 @@ return {
     'neovim/nvim-lspconfig',
     config = function()
       local lspconfig = require('lspconfig')
-      lspconfig.clangd.setup({})
-      lspconfig.dockerls.setup({})
-      lspconfig.docker_compose_language_service.setup({})
-      lspconfig.golangci_lint_ls.setup({})
-      lspconfig.gopls.setup({})
-      lspconfig.gradle_ls.setup({})
-      lspconfig.html.setup({})
-      lspconfig.hls.setup({})
-      lspconfig.jsonls.setup({})
-      lspconfig.tsserver.setup({})
-      lspconfig.kotlin_language_server.setup({})
-      lspconfig.pyright.setup({})
-      lspconfig.rust_analyzer.setup({})
-      lspconfig.ruby_ls.setup({})
-      lspconfig.lua_ls.setup({})
+      for _, v in pairs(servers) do
+        lspconfig[v].setup({})
+      end
+
+      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
+      vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, {})
+      vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+      vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {})
+      vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, {})
     end
   }
 }
