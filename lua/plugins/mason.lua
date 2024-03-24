@@ -24,8 +24,11 @@ return {
     'neovim/nvim-lspconfig',
     config = function()
       local lspconfig = require('lspconfig')
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
       for _, v in pairs(servers) do
-        lspconfig[v].setup({})
+        lspconfig[v].setup({
+          capabilities = capabilities
+        })
       end
 
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})

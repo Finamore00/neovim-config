@@ -13,7 +13,6 @@ return {
     'nvim-telescope/telescope-ui-select.nvim',
     config = function()
       require('telescope').setup({
-        initial_mode = 'normal',
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown {}
