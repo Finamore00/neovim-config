@@ -1,6 +1,6 @@
 local servers = {
   'clangd', 'dockerls', 'docker_compose_language_service',
-  'golangci_lint_ls', 'gopls', 'gradle_ls', 'html', 'hls',
+  'golangci_lint_ls', 'gopls', 'gradle_ls', 'html',
   'jsonls', 'tsserver', 'kotlin_language_server', 'pyright',
   'rust_analyzer', 'lua_ls'
 }
