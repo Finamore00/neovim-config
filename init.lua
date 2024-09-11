@@ -4,6 +4,7 @@ vim.go.tabstop = 4
 vim.go.softtabstop = 4
 vim.go.shiftwidth = 4
 vim.go.expandtab = true
+vim.wo.relativenumber = true
 
 -- Self-defined keybindings
 vim.keymap.set('n', '<leader>e', vim.cmd.Ex, {})
@@ -12,4 +13,4 @@ vim.keymap.set('n', '<leader>e', vim.cmd.Ex, {})
 require('config.lazy')
 
 -- Colorscheme
-vim.cmd([[colorscheme onedark]])
+vim.cmd([[colorscheme onedark_vivid]])
