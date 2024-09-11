@@ -8,7 +8,7 @@ return {
                 "c", "lua", "bash", "c_sharp", "cmake", "cpp", "css",
                 "cuda", "dart", "dockerfile", "git_config", "gitignore",
                 "go", "goctl", "gomod", "gosum", "gowork", "html", "java",
-                "jsdoc", "json", "kotlin", "make", "zig", "markdown", 
+                "jsdoc", "json", "kotlin", "make", "zig", "markdown",
                 "python", "rust", "sql", "ssh_config", "swift", "toml", "tsx",
                 "typescript", "yaml", "javascript"
             },
