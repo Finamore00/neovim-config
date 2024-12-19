@@ -13,4 +13,4 @@ vim.o.shiftwidth = 4
 require("config.lazy")
 
 -- Colorscheme
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("tokyonight-night")
