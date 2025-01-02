@@ -3,7 +3,7 @@ return {
     dependencies = {
         "williamboman/mason.nvim",
         "neovim/nvim-lspconfig",
-        "saghen/blink.cmp"
+        "hrsh7th/nvim-cmp"
     },
     config = function()
         local lsps = {
@@ -22,7 +22,7 @@ return {
         })
 
         for _, v in pairs(lsps) do
-            lsp_config[v].capabilities = require("blink.cmp").get_lsp_capabilities({})
+            lsp_config[v].capabilities = require("cmp_nvim_lsp").default_capabilities()
             lsp_config[v].setup({})
         end
     end
