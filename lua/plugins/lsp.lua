@@ -25,5 +25,11 @@ return {
             lsp_config[v].capabilities = require("cmp_nvim_lsp").default_capabilities()
             lsp_config[v].setup({})
         end
+
+        -- Key bindings
+        vim.keymap.set("n", "<Leader>gd", vim.lsp.buf.definition, {})
+        vim.keymap.set("n", "<Leader>K", vim.lsp.buf.hover, {})
+        vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, {})
+
     end
 }
