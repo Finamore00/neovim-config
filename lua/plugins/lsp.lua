@@ -27,9 +27,9 @@ return {
         end
 
         -- Key bindings
-        vim.keymap.set("n", "<Leader>gd", vim.lsp.buf.definition, {})
+        vim.keymap.set("n", "<Leader>d", vim.lsp.buf.definition, {})
         vim.keymap.set("n", "<Leader>K", vim.lsp.buf.hover, {})
-        vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, {})
+        vim.keymap.set("n", "<Leader>a", vim.lsp.buf.code_action, {})
 
     end
 }
