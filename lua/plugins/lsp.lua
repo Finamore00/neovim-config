@@ -13,7 +13,7 @@ return {
         }
         local mason = require("mason")
         local mason_lsp = require("mason-lspconfig")
-        local lsp_config = require("lspconfig")
+        local cmp_lsp = require("cmp_nvim_lsp")
 
         mason.setup()
         mason_lsp.setup({
@@ -23,8 +23,9 @@ return {
 
         for _, v in pairs(lsps) do
             vim.lsp.enable(v)
-            lsp_config[v].capabilities = require("cmp_nvim_lsp").default_capabilities()
-            lsp_config[v].setup({})
+            vim.lsp.config(v, {
+                capabilities = cmp_lsp.default_capabilities()
+            })
         end
 
         -- Key bindings
