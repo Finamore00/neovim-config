@@ -22,6 +22,7 @@ return {
         })
 
         for _, v in pairs(lsps) do
+            vim.lsp.enable(v)
             lsp_config[v].capabilities = require("cmp_nvim_lsp").default_capabilities()
             lsp_config[v].setup({})
         end
@@ -30,6 +31,7 @@ return {
         vim.keymap.set("n", "<Leader>d", vim.lsp.buf.definition, {})
         vim.keymap.set("n", "<Leader>K", vim.lsp.buf.hover, {})
         vim.keymap.set("n", "<Leader>a", vim.lsp.buf.code_action, {})
+        vim.keymap.set("n", "<Leader>h", vim.diagnostic.open_float, {})
 
     end
 }
