@@ -22,6 +22,7 @@ vim.o.shiftwidth = 4
 
 -- Add relative line numbers
 vim.wo.relativenumber = true
+vim.wo.number = true
 
 -- Lazy.nvim require
 require("config.lazy")
