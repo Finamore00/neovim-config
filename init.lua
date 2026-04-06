@@ -19,7 +19,8 @@ vim.keymap.set('n', '<leader>e', vim.cmd.Ex)
 
 vim.lsp.on_type_formatting.enable(true)
 vim.diagnostic.config({
-    update_in_insert = true
+    update_in_insert = true,
+    virtual_text = true
 })
 
 vim.cmd('packadd nvim.undotree')
