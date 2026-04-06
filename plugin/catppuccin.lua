@@ -9,7 +9,12 @@ require('catppuccin').setup({
         neotree = true,
         harpoon = true,
         telescope = {
-            enabled = true
+            enabled = true,
+        },
+        indent_blankline = {
+            enabled = true,
+            scope_color = '',
+            colored_indent_levels = false
         }
     }
 })
