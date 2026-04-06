@@ -12,6 +12,8 @@ vim.keymap.set('n', '<leader>ft', builtin.live_grep, { desc = 'Search file conte
 vim.keymap.set('n', '<leader>fg', builtin.git_files, { desc = 'Search git files' })
 
 -- Configure telescope native fzf
+local actions = require('telescope.actions')
+
 require('telescope').setup({
     extensions = {
         fzf = {
@@ -19,7 +21,19 @@ require('telescope').setup({
             override_generic_sorter = true,
             override_file_sorter = true,
             case_mode = "smart_case"
-        }
+        },
+    },
+    defaults = {
+        mappings = {
+            i = {
+                ['<C-k>'] = actions.delete_buffer
+            },
+            n = {
+                ['<C-k>'] = actions.delete_buffer,
+                ['dd'] = actions.delete_buffer
+            },
+        },
+        initial_mode = 'normal'
     }
 })
 
