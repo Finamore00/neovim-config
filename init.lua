@@ -28,11 +28,11 @@ vim.keymap.set('n', '<leader>cd', vim.diagnostic.open_float, {})
 
 vim.cmd('packadd nvim.undotree')
 vim.g.undotree_WindowLayout = 2
-vim.keymap.set('n', '<C-u>', vim.cmd.Undotree)
+vim.keymap.set('n', '<leader>u', vim.cmd.Undotree)
 
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*",
     callback = function(args)
-        require('vim.lsp.buf').format({ async = false})
+        require('vim.lsp.buf').format({ async = false })
     end
 })
