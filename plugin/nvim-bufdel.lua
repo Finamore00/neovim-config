@@ -4,3 +4,5 @@ require('bufdel').setup({
     next = 'tabs',
     quit = false
 })
+
+vim.keymap.set('n', '<C-k>', '<Cmd>BufDel<CR>', { desc = 'Delete current buffer' })
