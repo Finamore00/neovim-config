@@ -15,6 +15,8 @@ vim.opt.softtabstop = 4
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+vim.opt.winborder = 'rounded'
+
 vim.keymap.set('n', '<leader>e', vim.cmd.Ex)
 
 vim.lsp.on_type_formatting.enable(true)
@@ -32,7 +34,7 @@ vim.keymap.set('n', '<leader>u', vim.cmd.Undotree)
 
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*",
-    callback = function(args)
+    callback = function()
         require('vim.lsp.buf').format({ async = false })
     end
 })
