@@ -24,7 +24,7 @@ vim.diagnostic.config({
         border = 'rounded'
     }
 })
-vim.keymap.set('n', '<leader>cd', vim.diagnostic.open_float, {})
+vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, {})
 
 vim.cmd('packadd nvim.undotree')
 vim.g.undotree_WindowLayout = 2
