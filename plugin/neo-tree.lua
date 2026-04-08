@@ -5,6 +5,8 @@ vim.pack.add({
     'https://github.com/MunifTanjim/nui.nvim'
 })
 
-require('neo-tree').setup({})
+require('neo-tree').setup({
+    close_if_last_window = true
+})
 
 vim.keymap.set('n', '<C-t>', '<Cmd>Neotree toggle<CR>', { desc = 'Toggle Neotree' })

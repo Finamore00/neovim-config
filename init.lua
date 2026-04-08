@@ -17,8 +17,6 @@ vim.opt.relativenumber = true
 
 vim.opt.winborder = 'rounded'
 
-vim.keymap.set('n', '<leader>e', vim.cmd.Ex)
-
 vim.lsp.on_type_formatting.enable(true)
 vim.diagnostic.config({
     update_in_insert = true,
