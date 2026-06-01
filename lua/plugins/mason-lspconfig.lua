@@ -10,6 +10,6 @@ return {
     'neovim/nvim-lspconfig'
   },
   opts = {
-    ensure_installed = lsps
+    ensure_installed = LSPS
   }
 }

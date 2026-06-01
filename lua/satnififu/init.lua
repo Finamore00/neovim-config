@@ -10,3 +10,7 @@ vim.opt.softtabstop = 4
 vim.opt.cursorline = true
 vim.opt.number = true
 vim.opt.relativenumber = true
+
+vim.opt.winborder = 'rounded'
+
+vim.keymap.set('n', '<Leader>d', vim.diagnostic.open_float, { desc = 'Open diagnostic window' })
