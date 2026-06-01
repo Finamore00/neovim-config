@@ -1,4 +1,6 @@
 return {
   'ojroques/nvim-bufdel',
-  opts = {}
+  opts = {
+    quit = false
+  }
 }
