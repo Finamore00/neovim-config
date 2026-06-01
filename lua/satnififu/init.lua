@@ -7,8 +7,6 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 
+vim.opt.cursorline = true
 vim.opt.number = true
 vim.opt.relativenumber = true
-
--- Some keymaps
-vim.keymap.set('n', '<Leader>e', vim.cmd.Ex, { desc = 'File explorer' })
