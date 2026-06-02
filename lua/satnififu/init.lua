@@ -13,4 +13,7 @@ vim.opt.relativenumber = true
 
 vim.opt.winborder = 'rounded'
 
+vim.diagnostic.config({
+  update_in_insert = false
+})
 vim.keymap.set('n', '<Leader>d', vim.diagnostic.open_float, { desc = 'Open diagnostic window' })

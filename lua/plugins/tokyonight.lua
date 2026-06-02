@@ -4,7 +4,6 @@ return {
   priority = 1000,
   opts = {
     style = 'night',
-    light_style = 'day',
-    transparent = true
+    light_style = 'day'
   }
 }
